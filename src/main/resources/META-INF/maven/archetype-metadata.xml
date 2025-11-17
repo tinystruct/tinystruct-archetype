@@ -1,0 +1,47 @@
+<archetype-descriptor xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 https://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd">
+    <id>tinystruct-archetype</id>
+    <name>tinystruct archetype</name>
+    <version>1.0.0</version>
+    <requiredProperties>
+        <requiredProperty key="package">
+            <defaultValue>com.example.app</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="tinystructVersion">
+            <defaultValue>1.7.11</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+    <fileSets>
+        <fileSet>
+            <directory>src/main/java</directory>
+            <includes>
+                <include>**/*.java</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>.</directory>
+            <includes>
+                <include>pom.xml</include>
+            </includes>
+        </fileSet>
+        <!-- Ensure wrapper scripts, .mvn wrapper and bin scripts are packaged into generated projects -->
+        <fileSet>
+            <directory>.</directory>
+            <includes>
+                <include>mvnw</include>
+                <include>mvnw.cmd</include>
+                <include>.mvn/wrapper/**</include>
+                <include>bin/**</include>
+            </includes>
+            <!-- enable filtering so archetype properties (e.g. ${tinystructVersion}) are replaced -->
+            <filtered>true</filtered>
+        </fileSet>
+    </fileSets>
+</archetype-descriptor>
