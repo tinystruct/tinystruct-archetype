@@ -10,6 +10,24 @@
 
     <name>tinystruct-archetype</name>
     <description>Maven archetype for tinystruct applications</description>
+    <url>https://tinystruct.org</url>
+    <licenses>
+        <license>
+            <name>Apache 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+    <scm>
+        <url>https://github.com/tinystruct/tinystruct</url>
+    </scm>
+    <developers>
+        <developer>
+            <name>James Zhou</name>
+            <email>moverinfo@gmail.com</email>
+            <organizationUrl>https://tinystruct.org</organizationUrl>
+        </developer>
+    </developers>
+
     <properties>
         <!-- Always compile and filter using UTF-8 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
