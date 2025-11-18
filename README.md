@@ -19,24 +19,24 @@ mvnw.cmd clean install
 # Windows (cmd.exe)
 mvnw.cmd archetype:generate ^
 	-DarchetypeCatalog=local ^
-	-DarchetypeGroupId=org.tinystruct.archetype ^
+	-DarchetypeGroupId=org.tinystruct ^
 	-DarchetypeArtifactId=tinystruct-archetype ^
 	-DarchetypeVersion=1.0.0 ^
 	-DgroupId=com.mycompany ^
 	-DartifactId=my-tiny-app ^
 	-Dpackage=com.mycompany.app ^
-	-Dtinystruct.version=1.7.10
+	-Dtinystruct.version=1.7.11
 
 # Unix / macOS
 ./mvnw archetype:generate \
 	-DarchetypeCatalog=local \
-	-DarchetypeGroupId=org.tinystruct.archetype \
+	-DarchetypeGroupId=org.tinystruct \
 	-DarchetypeArtifactId=tinystruct-archetype \
 	-DarchetypeVersion=1.0.0 \
 	-DgroupId=com.mycompany \
 	-DartifactId=my-tiny-app \
 	-Dpackage=com.mycompany.app \
-	-Dtinystruct.version=1.7.10
+	-Dtinystruct.version=1.7.11
 ```
 
 3. Build the generated project:
@@ -49,7 +49,7 @@ mvnw.cmd clean package
 ./mvnw clean package
 ```
 
-Adjust `tinystruct.version` if needed. The generated project includes a simple `Application` that extends `AbstractApplication` with a sample `hello` action.
+Adjust `tinystructVersion` if needed. The generated project includes a simple `Application` that extends `AbstractApplication` with a sample `hello` action.
 
 ## Notes
 
@@ -68,7 +68,7 @@ mvnw.cmd test
 ./mvnw test
 ```
 
-- If you plan to publish the archetype, set `tinystruct.version` to a released version and test generation in a clean directory.
+- If you plan to publish the archetype, set `tinystructVersion` to a released version and test generation in a clean directory.
 tinystruct Maven archetype
 # tinystruct Maven archetype
 
@@ -87,13 +87,13 @@ mvn clean install
 ```cmd
 mvn archetype:generate \
 	-DarchetypeCatalog=local \
-	-DarchetypeGroupId=org.tinystruct.archetype \
+	-DarchetypeGroupId=org.tinystruct \
 	-DarchetypeArtifactId=tinystruct-archetype \
 	-DarchetypeVersion=1.0.0 \
 	-DgroupId=com.mycompany \
 	-DartifactId=my-tiny-app \
 	-Dpackage=com.mycompany.app \
-	-Dtinystruct.version=1.7.10
+	-DtinystructVersion=1.7.11
 ```
 
 3. Build the generated project:
@@ -103,7 +103,7 @@ cd my-tiny-app
 mvn clean package
 ```
 
-Adjust `tinystruct.version` if needed. The generated project includes a simple `Application` that extends `AbstractApplication` with a sample `hello` action.
+Adjust `tinystructVersion` if needed. The generated project includes a simple `Application` that extends `AbstractApplication` with a sample `hello` action.
 
 ## Notes
 
@@ -119,4 +119,4 @@ Adjust `tinystruct.version` if needed. The generated project includes a simple `
 mvn test
 ```
 
-- If you plan to publish the archetype, set `tinystruct.version` to a released version and test generation in a clean directory.
+- If you plan to publish the archetype, set `tinystructVersion` to a released version and test generation in a clean directory.
