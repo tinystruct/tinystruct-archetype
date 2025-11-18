@@ -13,7 +13,7 @@
         </requiredProperty>
     </requiredProperties>
     <fileSets>
-        <fileSet>
+        <fileSet filtered="true">
             <directory>src/main/java</directory>
             <includes>
                 <include>**/*.java</include>
@@ -24,24 +24,29 @@
             <includes>
                 <include>**/*</include>
             </includes>
+            <filtered>true</filtered>
         </fileSet>
         <fileSet>
             <directory>.</directory>
             <includes>
                 <include>pom.xml</include>
-            </includes>
-        </fileSet>
-        <!-- Ensure wrapper scripts, .mvn wrapper and bin scripts are packaged into generated projects -->
-        <fileSet>
-            <directory>.</directory>
-            <includes>
                 <include>mvnw</include>
                 <include>mvnw.cmd</include>
-                <include>.mvn/wrapper/**</include>
-                <include>bin/**</include>
             </includes>
-            <!-- enable filtering so archetype properties (e.g. ${tinystructVersion}) are replaced -->
             <filtered>true</filtered>
+        </fileSet>
+        <fileSet filtered="true">
+            <directory>bin</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>.mvn</directory>
+            <includes>
+                <include>**/*</include>
+                <include>**/wrapper/*</include>
+            </includes>
         </fileSet>
     </fileSets>
 </archetype-descriptor>

@@ -16,5 +16,46 @@ def setExec = { path ->
     }
 }
 
-setExec('mvnw')
 setExec('bin/dispatcher')
+
+import java.nio.file.Path
+import java.nio.file.Paths
+
+// Get the generated project directory
+Path projectPath = Paths.get(request.outputDirectory, request.artifactId)
+File projectDir = projectPath.toFile()
+
+println ""
+println "=" * 60
+println "Compiling generated project..."
+println "=" * 60
+
+try {
+    // Execute Maven compile
+    def command = System.getProperty('os.name').toLowerCase().contains('windows')
+            ? ['cmd', '/c', 'mvn', 'clean', 'compile']
+            : ['mvn', 'clean', 'compile']
+
+    def process = command.execute(null, projectDir)
+    process.consumeProcessOutput(System.out, System.err)
+    process.waitFor()
+
+    if (process.exitValue() == 0) {
+        println ""
+        println "✓ Project compiled successfully!"
+        println ""
+    } else {
+        println ""
+        println "⚠ Compilation completed with warnings/errors"
+        println "  You may need to run 'mvn clean compile' manually"
+        println ""
+    }
+} catch (Exception e) {
+    println ""
+    println "⚠ Could not auto-compile: ${e.message}"
+    println "  Please run 'mvn clean compile' manually"
+    println ""
+}
+
+println "Project location: ${projectPath}"
+println "=" * 60
