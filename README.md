@@ -1,6 +1,17 @@
 # tinystruct maven archetype
 
 This archetype creates a minimal tinystruct application.
+```cmd
+mvn archetype:generate \
+	-DarchetypeGroupId=org.tinystruct \
+	-DarchetypeArtifactId=tinystruct-archetype \
+	-DarchetypeVersion=1.0.0 \
+	-DgroupId=com.mycompany \
+	-DartifactId=my-tiny-app \
+	-Dpackage=com.mycompany.app \
+	-DtinystructVersion=1.7.11 \
+    -DinteractiveMode=false
+```
 
 ## Usage (after installing the archetype locally)
 
