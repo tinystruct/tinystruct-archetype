@@ -1,4 +1,4 @@
-# tinystruct Maven archetype
+# tinystruct maven archetype
 
 This archetype creates a minimal tinystruct application.
 
