@@ -1,0 +1,31 @@
+#!/usr/bin/env sh
+
+# Dispatcher script (copied from project root)
+ROOT="$(pwd)"
+VERSION="${tinystructVersion}"
+cd "$(dirname "$0")" || exit
+cd "../"
+# Navigate to the root directory
+cd "$ROOT" || exit
+
+JAVA_OPTS=""
+args=""
+
+for arg; do
+    str=$(echo "$arg" | awk  '{ string=substr($0, 0, 2); print string; }' )
+    if [ "$str" = "-D" ] || [ "$str" = "-X" ]; then
+        JAVA_OPTS="$JAVA_OPTS $arg"
+    else
+        args="$args $arg"
+    fi
+done
+
+JAR_FILE=""
+for jar_file in "$ROOT"/lib/tinystruct-"$VERSION".jar; do
+    [ -f "$jar_file" ] && JAR_FILE="$JAR_FILE$jar_file:"
+done
+
+$JAVA_HOME/bin/java \
+$JAVA_OPTS \
+-XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/ \
+-cp "$ROOT/target/classes:$CLASSPATH:$ROOT/WEB-INF/lib/*:$ROOT/WEB-INF/classes:$JAR_FILE" org.tinystruct.system.Dispatcher "$@"
