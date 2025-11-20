@@ -1,80 +1,12 @@
-# tinystruct Maven archetype
+# tinystruct maven archetype
 
 This archetype creates a minimal tinystruct application.
-
-## Usage (after installing the archetype locally)
-
-1. Install the archetype into your local Maven repository:
-
+## Quick usage
 ```cmd
-# Windows (cmd.exe)
-mvnw.cmd clean install
-# Unix / macOS
-./mvnw clean install
+mvn archetype:generate -DarchetypeGroupId=org.tinystruct -DarchetypeArtifactId=tinystruct-archetype -DarchetypeVersion=1.0.0 -DgroupId=com.mycompany -DartifactId=my-tiny-app -Dpackage=com.mycompany.app -DtinystructVersion=1.7.11 -DinteractiveMode=false
 ```
 
-2. Generate a new project from the archetype (example):
-
-```cmd
-# Windows (cmd.exe)
-mvnw.cmd archetype:generate ^
-	-DarchetypeCatalog=local ^
-	-DarchetypeGroupId=org.tinystruct ^
-	-DarchetypeArtifactId=tinystruct-archetype ^
-	-DarchetypeVersion=1.0.0 ^
-	-DgroupId=com.mycompany ^
-	-DartifactId=my-tiny-app ^
-	-Dpackage=com.mycompany.app ^
-	-Dtinystruct.version=1.7.11
-
-# Unix / macOS
-./mvnw archetype:generate \
-	-DarchetypeCatalog=local \
-	-DarchetypeGroupId=org.tinystruct \
-	-DarchetypeArtifactId=tinystruct-archetype \
-	-DarchetypeVersion=1.0.0 \
-	-DgroupId=com.mycompany \
-	-DartifactId=my-tiny-app \
-	-Dpackage=com.mycompany.app \
-	-Dtinystruct.version=1.7.11
-```
-
-3. Build the generated project:
-
-```cmd
-cd my-tiny-app
-# Windows (cmd.exe)
-mvnw.cmd clean package
-# Unix / macOS
-./mvnw clean package
-```
-
-Adjust `tinystructVersion` if needed. The generated project includes a simple `Application` that extends `AbstractApplication` with a sample `hello` action.
-
-## Notes
-
-- **Java version:** this archetype targets Java 17 by default (see `archetype-resources/pom.xml`). Ensure you have JDK 17+ installed.
-- **CI:** a sample GitHub Actions workflow is included to build and test the generated projects on push/PR (`.github/workflows/maven.yml`).
-- **Maven Wrapper:** consider adding the Maven Wrapper (`mvnw`) to this repository so contributors can build without installing Maven globally.
-
-## Quick tips
-
-- To run tests in a generated project use the wrapper:
-
-```cmd
-# Windows (cmd.exe)
-mvnw.cmd test
-# Unix / macOS
-./mvnw test
-```
-
-- If you plan to publish the archetype, set `tinystructVersion` to a released version and test generation in a clean directory.
-tinystruct Maven archetype
-# tinystruct Maven archetype
-
-This archetype creates a minimal tinystruct application.
-
-## Usage (after installing the archetype locally)
+## Usage with installing the archetype locally
 
 1. Install the archetype into your local Maven repository:
 
