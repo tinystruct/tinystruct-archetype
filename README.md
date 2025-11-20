@@ -3,7 +3,7 @@
 This archetype creates a minimal tinystruct application.
 ## Quick usage
 ```cmd
-mvn archetype:generate -DarchetypeGroupId=org.tinystruct -DarchetypeArtifactId=tinystruct-archetype -DarchetypeVersion=1.0.1 -DgroupId=com.mycompany -DartifactId=my-tiny-app -Dpackage=com.mycompany.app -DtinystructVersion=1.7.11 -DinteractiveMode=false
+mvn archetype:generate -DarchetypeGroupId="org.tinystruct" -DarchetypeArtifactId="tinystruct-archetype" -DarchetypeVersion="1.0.1" -DgroupId="com.mycompany" -DartifactId="my-tiny-app" -Dpackage="com.mycompany.app" -DtinystructVersion="1.7.11" -DinteractiveMode="false"
 ```
 
 ## Usage with installing the archetype locally
@@ -18,14 +18,14 @@ mvn clean install
 
 ```cmd
 mvn archetype:generate \
-	-DarchetypeCatalog=local \
-	-DarchetypeGroupId=org.tinystruct \
-	-DarchetypeArtifactId=tinystruct-archetype \
-	-DarchetypeVersion=1.0.1 \
-	-DgroupId=com.mycompany \
-	-DartifactId=my-tiny-app \
-	-Dpackage=com.mycompany.app \
-	-DtinystructVersion=1.7.11
+  -DarchetypeCatalog="local" \
+  -DarchetypeGroupId="org.tinystruct" \
+  -DarchetypeArtifactId="tinystruct-archetype" \
+  -DarchetypeVersion="1.0.1" \
+  -DgroupId="com.mycompany" \
+  -DartifactId="my-tiny-app" \
+  -Dpackage="com.mycompany.app" \
+  -DtinystructVersion="1.7.11"
 ```
 
 3. Build the generated project:
