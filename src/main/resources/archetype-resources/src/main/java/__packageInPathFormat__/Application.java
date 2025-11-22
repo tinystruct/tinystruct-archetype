@@ -19,7 +19,7 @@ public class Application extends AbstractApplication {
 
     @Override
     public void init() {
-
+        this.setTemplateRequired(false);
     }
 
     @Override
