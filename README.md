@@ -45,7 +45,7 @@ This creates your new project instantly.
 ## 🛠 Build Your Project
 
 ```bash
-cd my-tinystruct-app
+cd my-tiny-app
 mvn clean package
 ```
 
@@ -58,7 +58,7 @@ Since tinystruct now uses **HttpServer** as the default HTTP server, the run com
 ```bash
 bin/dispatcher start \
   --import org.tinystruct.system.HttpServer \
-  --import com.example.app.Application
+  --import com.mycompany.app.Application
 ```
 
 Your tinystruct service is now up and running.
