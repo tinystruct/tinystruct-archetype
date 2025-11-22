@@ -30,7 +30,7 @@ Because the archetype is published on Maven Central, you can use it immediately.
 
 ---
 
-## 🚀 Generate a tinystruct Project (Maven Central)
+## 🚀 Generate a tinystruct project
 
 Simply run:
 
@@ -42,20 +42,12 @@ This creates your new project instantly.
 
 ---
 
-## 🛠 Build Your Project
-
-```bash
-cd my-tiny-app
-mvn clean package
-```
-
----
-
-## ▶️ Run Your tinystruct Application
+## ▶️ Run your tinystruct application
 
 Since tinystruct now uses **HttpServer** as the default HTTP server, the run command becomes:
 
 ```bash
+cd my-tiny-app
 bin/dispatcher start \
   --import org.tinystruct.system.HttpServer \
   --import com.mycompany.app.Application
