@@ -21,14 +21,10 @@ Your project is generated with tinystruct’s recommended conventions:
 * No boilerplate or extra configuration needed
 
 ### **3. Built for tinystruct 1.7.11**
-
 Select the version you want (e.g., `1.7.11`), and it's applied automatically.
 
 ### **4. No Repo Clone Needed**
-
 Because the archetype is published on Maven Central, you can use it immediately.
-
----
 
 ## 🚀 Generate a tinystruct project
 
@@ -37,10 +33,9 @@ Simply run:
 ```cmd
 mvn archetype:generate -DarchetypeGroupId="org.tinystruct" -DarchetypeArtifactId="tinystruct-archetype" -DarchetypeVersion="1.0.1" -DgroupId="com.mycompany" -DartifactId="my-tiny-app" -Dpackage="com.mycompany.app" -DtinystructVersion="1.7.11" -DinteractiveMode="false"
 ```
-
+Adjust `tinystructVersion` if needed. The generated project includes a simple `Application` that extends `AbstractApplication` with a sample `hello` action.
 This creates your new project instantly.
 
----
 
 ## ▶️ Run your tinystruct application
 
@@ -54,8 +49,6 @@ bin/dispatcher start \
 ```
 
 Your tinystruct service is now up and running.
-
-Adjust `tinystructVersion` if needed. The generated project includes a simple `Application` that extends `AbstractApplication` with a sample `hello` action.
 
 ## Notes
 
