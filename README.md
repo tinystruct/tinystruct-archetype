@@ -1,39 +1,67 @@
-# tinystruct maven archetype
+# Kickstart your tinystruct project using the tinystruct-archetype
 
-This archetype creates a minimal tinystruct application.
-## Quick usage
+*A simple way to bootstrap applications with tinystruct 1.7.11*
+
+If you're building an application with the **tinystruct** framework, the easiest way to begin is by using the **tinystruct-archetype**, now available on **Maven Central**.
+It gives you a clean, fully prepared project structure with zero manual setup.
+
+## 🌟 Why Use tinystruct-archetype?
+
+### **1. Instant Project Generation**
+
+One command creates a complete tinystruct application with the correct `pom.xml`, directory layout, and starter code.
+
+### **2. Clean, Consistent Structure**
+
+Your project is generated with tinystruct’s recommended conventions:
+
+* `AbstractApplication` as the base
+* `@Action` for defining routes
+* Ready to run via CLI or as an HTTP service
+* No boilerplate or extra configuration needed
+
+### **3. Built for tinystruct 1.7.11**
+
+Select the version you want (e.g., `1.7.11`), and it's applied automatically.
+
+### **4. No Repo Clone Needed**
+
+Because the archetype is published on Maven Central, you can use it immediately.
+
+---
+
+## 🚀 Generate a tinystruct Project (Maven Central)
+
+Simply run:
+
 ```cmd
 mvn archetype:generate -DarchetypeGroupId="org.tinystruct" -DarchetypeArtifactId="tinystruct-archetype" -DarchetypeVersion="1.0.1" -DgroupId="com.mycompany" -DartifactId="my-tiny-app" -Dpackage="com.mycompany.app" -DtinystructVersion="1.7.11" -DinteractiveMode="false"
 ```
 
-## Usage with installing the archetype locally
+This creates your new project instantly.
 
-1. Install the archetype into your local Maven repository:
+---
 
-```cmd
-mvn clean install
-```
+## 🛠 Build Your Project
 
-2. Generate a new project from the archetype (example):
-
-```cmd
-mvn archetype:generate \
-  -DarchetypeCatalog="local" \
-  -DarchetypeGroupId="org.tinystruct" \
-  -DarchetypeArtifactId="tinystruct-archetype" \
-  -DarchetypeVersion="1.0.1" \
-  -DgroupId="com.mycompany" \
-  -DartifactId="my-tiny-app" \
-  -Dpackage="com.mycompany.app" \
-  -DtinystructVersion="1.7.11"
-```
-
-3. Build the generated project:
-
-```cmd
-cd my-tiny-app
+```bash
+cd my-tinystruct-app
 mvn clean package
 ```
+
+---
+
+## ▶️ Run Your tinystruct Application
+
+Since tinystruct now uses **HttpServer** as the default HTTP server, the run command becomes:
+
+```bash
+bin/dispatcher start \
+  --import org.tinystruct.system.HttpServer \
+  --import com.example.app.Application
+```
+
+Your tinystruct service is now up and running.
 
 Adjust `tinystructVersion` if needed. The generated project includes a simple `Application` that extends `AbstractApplication` with a sample `hello` action.
 
@@ -42,13 +70,3 @@ Adjust `tinystructVersion` if needed. The generated project includes a simple `A
 - **Java version:** this archetype targets Java 17 by default (see `archetype-resources/pom.xml`). Ensure you have JDK 17+ installed.
 - **CI:** a sample GitHub Actions workflow is included to build and test the generated projects on push/PR (`.github/workflows/maven.yml`).
 - **Maven Wrapper:** consider adding the Maven Wrapper (`mvnw`) to this repository so contributors can build without installing Maven globally.
-
-## Quick tips
-
-- To run tests in a generated project use:
-
-```cmd
-mvn test
-```
-
-- If you plan to publish the archetype, set `tinystructVersion` to a released version and test generation in a clean directory.
