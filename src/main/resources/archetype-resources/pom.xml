@@ -11,6 +11,12 @@
     <name>${artifactId}</name>
     <description>Generated tinystruct application</description>
 
+    <properties>
+        <!-- Always compile and filter using UTF-8 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <encoding>UTF-8</encoding>
+    </properties>
     <dependencies>
         <!-- add tinystruct dependency as a provided example; user can adjust version -->
         <dependency>
