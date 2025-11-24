@@ -5,6 +5,10 @@ import org.tinystruct.system.annotation.Action;
 
 @Action(value = "", description = "Sample tinystruct application", mode = Action.Mode.CLI)
 public class Application extends AbstractApplication {
+    @Override
+    public void init() {
+        this.setTemplateRequired(false);
+    }
 
     @Action(value = "hello", description = "Say hello")
     public String sayHello() {
@@ -15,11 +19,6 @@ public class Application extends AbstractApplication {
     @Override
     public String help() {
         return super.help();
-    }
-
-    @Override
-    public void init() {
-        this.setTemplateRequired(false);
     }
 
     @Override
