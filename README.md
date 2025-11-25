@@ -31,7 +31,7 @@ Because the archetype is published on Maven Central, you can use it immediately.
 Simply run:
 
 ```cmd
-mvn archetype:generate -DarchetypeGroupId="org.tinystruct" -DarchetypeArtifactId="tinystruct-archetype" -DarchetypeVersion="1.0.2" -DgroupId="com.mycompany" -DartifactId="my-tiny-app" -Dpackage="com.mycompany.app" -DtinystructVersion="1.7.11" -DinteractiveMode="false"
+mvn archetype:generate -DarchetypeGroupId="org.tinystruct" -DarchetypeArtifactId="tinystruct-archetype" -DarchetypeVersion="1.0.3" -DgroupId="com.mycompany" -DartifactId="my-tiny-app" -Dpackage="com.mycompany.app" -DtinystructVersion="1.7.11" -DinteractiveMode="false"
 ```
 Adjust `tinystructVersion` if needed. The generated project includes a simple `Application` that extends `AbstractApplication` with a sample `hello` action.
 This creates your new project instantly.
