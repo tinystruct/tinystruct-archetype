@@ -1,6 +1,6 @@
 # Kickstart your tinystruct project using the tinystruct-archetype
 
-*A simple way to bootstrap applications with tinystruct 1.7.11*
+*A simple way to bootstrap applications with tinystruct 1.7.12*
 
 If you're building an application with the **tinystruct** framework, the easiest way to begin is by using the **tinystruct-archetype**, now available on **Maven Central**.
 It gives you a clean, fully prepared project structure with zero manual setup.
@@ -20,8 +20,8 @@ Your project is generated with tinystruct’s recommended conventions:
 * Ready to run via CLI or as an HTTP service
 * No boilerplate or extra configuration needed
 
-### **3. Built for tinystruct 1.7.11**
-Select the version you want (e.g., `1.7.11`), and it's applied automatically.
+### **3. Built for tinystruct 1.7.12**
+Select the version you want (e.g., `1.7.12`), and it's applied automatically.
 
 ### **4. No Repo Clone Needed**
 Because the archetype is published on Maven Central, you can use it immediately.
@@ -31,7 +31,7 @@ Because the archetype is published on Maven Central, you can use it immediately.
 Simply run:
 
 ```cmd
-mvn archetype:generate -DarchetypeGroupId="org.tinystruct" -DarchetypeArtifactId="tinystruct-archetype" -DarchetypeVersion="1.0.2" -DgroupId="com.mycompany" -DartifactId="my-tiny-app" -Dpackage="com.mycompany.app" -DtinystructVersion="1.7.11" -DinteractiveMode="false"
+mvn archetype:generate -DarchetypeGroupId="org.tinystruct" -DarchetypeArtifactId="tinystruct-archetype" -DarchetypeVersion="1.0.2" -DgroupId="com.mycompany" -DartifactId="my-tiny-app" -Dpackage="com.mycompany.app" -DtinystructVersion="1.7.12" -DinteractiveMode="false"
 ```
 Adjust `tinystructVersion` if needed. The generated project includes a simple `Application` that extends `AbstractApplication` with a sample `hello` action.
 This creates your new project instantly.
