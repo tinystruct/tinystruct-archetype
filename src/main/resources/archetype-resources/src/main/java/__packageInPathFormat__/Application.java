@@ -15,6 +15,21 @@ public class Application extends AbstractApplication {
         return "Hello from generated tinystruct app!";
     }
 
+    @Action(value = "hello", description = "Say hello")
+    public String sayHello(String words) {
+        return words;
+    }
+
+    @Action(value = "hello", mode = Mode.HTTP_GET)
+    public String helloGet() {
+        return "GET";
+    }
+
+    @Action(value = "hello", mode = Mode.HTTP_POST)
+    public String helloPost() {
+        return "POST";
+    }
+
     @Action(value = "--help", description = "Print help information")
     @Override
     public String help() {
