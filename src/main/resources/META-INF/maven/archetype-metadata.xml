@@ -9,7 +9,7 @@
             <defaultValue>com.example.app</defaultValue>
         </requiredProperty>
         <requiredProperty key="tinystructVersion">
-            <defaultValue>1.7.12</defaultValue>
+            <defaultValue>1.7.17</defaultValue>
         </requiredProperty>
     </requiredProperties>
     <fileSets>
@@ -32,6 +32,7 @@
                 <include>pom.xml</include>
                 <include>mvnw</include>
                 <include>mvnw.cmd</include>
+                <include>DEVELOPER_GUIDE.md</include>
             </includes>
             <filtered>true</filtered>
         </fileSet>
