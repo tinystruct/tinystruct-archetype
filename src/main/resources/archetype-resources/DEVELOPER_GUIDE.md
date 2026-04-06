@@ -160,11 +160,13 @@ Tinystruct provides built-in support for various databases (H2, MySQL, SQLite, S
 2. **Usage**: Use the `generate` command to create POJOs and use the internal data layer to interact with the database.
 
 ### Session Management
-For web applications, session management is transparent. You can access session data via the `Context`:
+For web applications, session management is handled via the `Request` object. Include it as a parameter in your action method:
 
 ```java
-public String login() {
-    getContext().getSession().setAttribute("user", "James");
+import org.tinystruct.http.Request;
+
+public String login(Request<?, ?> request) {
+    request.getSession().setAttribute("user", "James");
     return "Logged in";
 }
 ```

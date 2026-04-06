@@ -201,15 +201,17 @@ String status = parsed.get("status").toString();
 ## Session Management (Web Mode)
 
 ```java
+import org.tinystruct.http.Request;
+
 @Action(value = "login", mode = Mode.HTTP_POST)
-public String login() {
-    getContext().getSession().setAttribute("userId", "42");
+public String login(Request<?, ?> request) {
+    request.getSession().setAttribute("userId", "42");
     return "Logged in";
 }
 
 @Action("profile")
-public String profile() {
-    Object userId = getContext().getSession().getAttribute("userId");
+public String profile(Request<?, ?> request) {
+    Object userId = request.getSession().getAttribute("userId");
     if (userId == null) return "Not logged in";
     return "User: " + userId;
 }
