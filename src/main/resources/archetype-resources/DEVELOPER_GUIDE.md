@@ -272,7 +272,15 @@ request.setMethod("POST")
        .setBody("{\"key\":\"value\"}");
 
 HTTPHandler handler = new HTTPHandler();
-String responseBody = handler.handleRequest(request).getBody();
+var response = handler.handleRequest(request);
+
+// Always check the status code before using the response body
+if (response.getStatusCode() == 200) {
+    String responseBody = response.getBody();
+    // Process the successful response
+} else {
+    // Handle the error (e.g., log response.getStatusCode())
+}
 ```
 
 ---
