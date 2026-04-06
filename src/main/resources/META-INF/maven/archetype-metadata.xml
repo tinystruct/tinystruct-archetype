@@ -9,7 +9,7 @@
             <defaultValue>com.example.app</defaultValue>
         </requiredProperty>
         <requiredProperty key="tinystructVersion">
-            <defaultValue>1.7.18</defaultValue>
+            <defaultValue>1.7.19</defaultValue>
         </requiredProperty>
     </requiredProperties>
     <fileSets>
@@ -47,6 +47,12 @@
             <includes>
                 <include>**/*</include>
                 <include>**/wrapper/*</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true">
+            <directory>.agent/skills/tinystruct-dev</directory>
+            <includes>
+                <include>SKILL.md</include>
             </includes>
         </fileSet>
     </fileSets>
