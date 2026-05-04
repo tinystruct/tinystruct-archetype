@@ -9,7 +9,7 @@
             <defaultValue>com.example.app</defaultValue>
         </requiredProperty>
         <requiredProperty key="tinystructVersion">
-            <defaultValue>1.7.19</defaultValue>
+            <defaultValue>1.7.22</defaultValue>
         </requiredProperty>
     </requiredProperties>
     <fileSets>
